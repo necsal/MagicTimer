@@ -93,7 +93,7 @@ public class MagicTimer: MGLogable {
         switch countMode {
         case .stopWatch:
             // Set totalCountedValue to all elpased time plus time in background.
-             counter.setTotalCountedValue(elapsedTime)
+            counter.setTotalCountedValue(counter.totalCountedValue + elapsedTime)
         case let .countDown(fromSeconds: countDownSeconds):
             
             let subtraction = countDownSeconds - elapsedTime
